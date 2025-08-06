@@ -41,7 +41,7 @@ jobs:
         username: ${{ secrets.CPANEL_FTP_USERNAME }}
         password: ${{ secrets.CPANEL_FTP_PASSWORD }}
         local-dir: ./dist/ # Your custom build folder
-        server-dir: /home/paurvinc/neocentricinteriors.co.zw/ # Or subfolder if needed
+        server-dir: /neocentricinteriors.co.zw/ # Or subfolder if needed
         dangerous-clean-slate: true # Cleans remote directory
         exclude: |
           **/.DS_Store
