@@ -64,7 +64,7 @@ interface TitleProps {
   gl: GL;
   plane: Mesh;
   renderer: Renderer;
-  text: string;
+ 
   textColor?: string;
   font?: string;
 }
@@ -73,24 +73,24 @@ class Title {
   gl: GL;
   plane: Mesh;
   renderer: Renderer;
-  text: string;
+
   textColor: string;
   font: string;
   mesh!: Mesh;
 
-  constructor({ gl, plane, renderer, text, textColor = "#545050", font = "30px sans-serif" }: TitleProps) {
+  constructor({ gl, plane, renderer,  textColor = "#545050", font = "30px sans-serif" }: TitleProps) {
     autoBind(this);
     this.gl = gl;
     this.plane = plane;
     this.renderer = renderer;
-    this.text = text;
+   
     this.textColor = textColor;
     this.font = font;
     this.createMesh();
   }
 
   createMesh() {
-    const { texture, width, height } = createTextTexture(this.gl, this.text, this.font, this.textColor);
+    const { texture, width, height } = createTextTexture(this.gl,  this.font, this.textColor);
     const geometry = new Plane(this.gl);
     const program = new Program(this.gl, {
       vertex: `
@@ -146,7 +146,7 @@ interface MediaProps {
   renderer: Renderer;
   scene: Transform;
   screen: ScreenSize;
-  text: string;
+ 
   viewport: Viewport;
   bend: number;
   textColor: string;
@@ -164,7 +164,7 @@ class Media {
   renderer: Renderer;
   scene: Transform;
   screen: ScreenSize;
-  text: string;
+
   viewport: Viewport;
   bend: number;
   textColor: string;
@@ -191,7 +191,7 @@ class Media {
     renderer,
     scene,
     screen,
-    text,
+ 
     viewport,
     bend,
     textColor,
@@ -206,7 +206,7 @@ class Media {
     this.renderer = renderer;
     this.scene = scene;
     this.screen = screen;
-    this.text = text;
+ 
     this.viewport = viewport;
     this.bend = bend;
     this.textColor = textColor;
@@ -303,7 +303,7 @@ class Media {
       gl: this.gl,
       plane: this.plane,
       renderer: this.renderer,
-      text: this.text,
+   
       textColor: this.textColor,
       font: this.font,
     });
@@ -532,7 +532,7 @@ class App {
         renderer: this.renderer,
         scene: this.scene,
         screen: this.screen,
-        text: data.text,
+       
         viewport: this.viewport,
         bend,
         textColor,
