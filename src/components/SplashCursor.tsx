@@ -65,7 +65,7 @@ export default function SplashCursor({
   SPLAT_FORCE = 6000,
   SHADING = true,
   COLOR_UPDATE_SPEED = 10,
-  BACK_COLOR = { r: 0.5, g: 0, b: 0 },
+  BACK_COLOR = { r: 0.1, g: 0.05, b: 0.0 }, // Dark orange-tinted background
   TRANSPARENT = true
 }: SplashCursorProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -74,7 +74,10 @@ export default function SplashCursor({
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    let pointers: Pointer[] = [pointerPrototype()];
+    let pointers: Pointer[] = [{
+      ...pointerPrototype(),
+      color: { r: 1.0, g: 0.5, b: 0.0 } // Initialize with orange color
+    }];
 
     let config = {
       SIM_RESOLUTION: SIM_RESOLUTION!,
@@ -1359,56 +1362,33 @@ export default function SplashCursor({
     }
 
     function generateColor(): ColorRGB {
-      const c = HSVtoRGB(Math.random(), 1.0, 1.0);
-      c.r *= 0.15;
-      c.g *= 0.15;
-      c.b *= 0.15;
-      return c;
-    }
-
-    function HSVtoRGB(h: number, s: number, v: number): ColorRGB {
-      let r = 0,
-        g = 0,
-        b = 0;
-      const i = Math.floor(h * 6);
-      const f = h * 6 - i;
-      const p = v * (1 - s);
-      const q = v * (1 - f * s);
-      const t = v * (1 - (1 - f) * s);
-
-      switch (i % 6) {
-        case 0:
-          r = v;
-          g = t;
-          b = p;
-          break;
-        case 1:
-          r = q;
-          g = v;
-          b = p;
-          break;
-        case 2:
-          r = p;
-          g = v;
-          b = t;
-          break;
-        case 3:
-          r = p;
-          g = q;
-          b = v;
-          break;
-        case 4:
-          r = t;
-          g = p;
-          b = v;
-          break;
-        case 5:
-          r = v;
-          g = p;
-          b = q;
-          break;
-      }
-      return { r, g, b };
+      // Generate orange-based colors with variations
+      const orangeColors = [
+        { r: 1.0, g: 0.4, b: 0.0 },   // Bright orange
+        { r: 1.0, g: 0.5, b: 0.0 },   // Orange
+        { r: 1.0, g: 0.6, b: 0.0 },   // Light orange
+        { r: 0.9, g: 0.3, b: 0.0 },   // Dark orange
+        { r: 1.0, g: 0.7, b: 0.2 },   // Peach
+        { r: 0.8, g: 0.4, b: 0.0 },   // Burnt orange
+        { r: 1.0, g: 0.3, b: 0.1 },   // Red-orange
+        { r: 0.9, g: 0.5, b: 0.1 },   // Amber
+      ];
+      
+      const randomColor = orangeColors[Math.floor(Math.random() * orangeColors.length)];
+      
+      // Apply some variation and intensity
+      const variation = 0.15;
+      const r = randomColor.r + (Math.random() - 0.5) * variation;
+      const g = randomColor.g + (Math.random() - 0.5) * variation;
+      const b = randomColor.b + (Math.random() - 0.5) * variation;
+      
+      // Ensure values are within valid range and apply intensity
+      const intensity = 1.0; // Increased intensity for more vibrant colors
+      return {
+        r: Math.max(0, Math.min(1, r)) * intensity,
+        g: Math.max(0, Math.min(1, g)) * intensity,
+        b: Math.max(0, Math.min(1, b)) * intensity
+      };
     }
 
     function wrap(value: number, min: number, max: number) {
@@ -1440,7 +1420,8 @@ export default function SplashCursor({
       const pointer = pointers[0];
       const posX = scaleByPixelRatio(e.clientX);
       const posY = scaleByPixelRatio(e.clientY);
-      const color = pointer.color;
+      // Generate a new orange color for each movement
+      const color = generateColor();
       updatePointerMoveData(pointer, posX, posY, color);
     });
 
@@ -1510,8 +1491,8 @@ export default function SplashCursor({
   ]);
 
   return (
-    <div className="w-full h-full pointer-events-none">
-      <canvas ref={canvasRef} id="fluid" className="w-full h-full block opacity-30"></canvas>
+    <div className="w-screen h-screen pointer-events-none">
+      <canvas ref={canvasRef} id="fluid" className="w-screen h-screen block opacity-30"></canvas>
     </div>
   );
 }
