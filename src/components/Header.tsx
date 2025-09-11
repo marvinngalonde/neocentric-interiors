@@ -6,19 +6,18 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="relative top-0 left-0 right-0 z-50 w-full border-b border-gray-400 bg-white">
+    <header className="relative top-0 left-0  right-0 z-50 w-full border-b border-gray-400 ">
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-2 h-2 bg-orange rounded-full"></div>
-            <span className="text-xl text-foreground font-['League_Spartan']">
-              Neocentric
-              <span className="font-thin italic text-orange ml-1 font-['League_Spartan']">
-                Interiors
-              </span>
-            </span>
+            <img
+              src="/log.png"
+              alt="Neocentric Interiors Logo"
+              className="h-10 w-auto"
+            />
           </div>
+
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center space-x-8">

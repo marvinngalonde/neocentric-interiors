@@ -3,8 +3,26 @@
 @tailwind utilities;
 
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+All colors MUST be HSL.*/
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-slide {
+  display: flex;
+  width: 200%;
+  animation: slide 60s linear infinite;
+}
+
+
+
+
 
 body {
   background: linear-gradient(
@@ -107,7 +125,7 @@ body {
     --ring: 220 14% 11%;
 
     /* Custom design tokens */
-    --orange: 359 44% 55%;
+    --orange:  357.45 88.68% 31.18%;
     --orange-foreground: 0 0% 100%;
     --orange-light: 32 98% 95%;
     --gray-50: 220 14% 98%;
