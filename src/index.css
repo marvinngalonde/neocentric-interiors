@@ -6,6 +6,76 @@
 All colors MUST be HSL.
 */
 
+body {
+  background: linear-gradient(
+    to right,
+    #ffffffff 0%,
+    #acaaaaff 30%,
+    #7c7c7cff 45%,
+    #7c7c7cff 55%,
+    #acaaaaff 70%,
+    #ffffffff 100%
+  );
+}
+
+.topLeft{
+  background: linear-gradient(
+    to bottom right,
+    #7c7c7cff 0%,
+    #acaaaaff 15%,
+    #ffffffff 40%,
+    #ffffffff 100%
+  );
+}
+
+
+.centeredbg{
+  background: linear-gradient(
+    to right,
+    #ffffffff 0%,
+    #acaaaaff 40%,
+    #7c7c7cff 55%,
+    #7c7c7cff 65%,
+    #acaaaaff 80%,
+    #ffffffff 100%
+  );
+}
+
+
+@font-face {
+  font-family: 'Wix Madefor Display';
+  src: url('/fonts/webfonts/wix-madefor-display-latin-700-normal.woff2') format('woff2'),
+       url('/fonts/webfonts/wix-madefor-display-latin-700-normal.woff') format('woff'),
+       url('/fonts/ttf/wix-madefor-display-latin-700-normal.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'League Spartan';
+  src: url('/fonts/static/LeagueSpartan-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'League Spartan';
+  src: url('/fonts/static/LeagueSpartan-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'League Spartan';
+  src: url('/fonts/static/LeagueSpartan-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -37,7 +107,7 @@ All colors MUST be HSL.
     --ring: 220 14% 11%;
 
     /* Custom design tokens */
-    --orange: 32 98% 59%;
+    --orange: 359 44% 55%;
     --orange-foreground: 0 0% 100%;
     --orange-light: 32 98% 95%;
     --gray-50: 220 14% 98%;

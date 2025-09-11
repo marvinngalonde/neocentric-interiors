@@ -75,7 +75,7 @@ const PortfolioSection = () => {
     <section 
       ref={ref}
       id="projects" 
-      className={`w-full bg-background py-16 transition-all duration-1000 ease-out ${
+      className={`w-full  py-16 transition-all duration-1000 ease-out ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
       }`}
     >
@@ -86,16 +86,16 @@ const PortfolioSection = () => {
             <div className="inline-block bg-orange/10 rounded-full px-4 py-2">
               <span className="text-sm font-medium text-orange">Recent Projects</span>
             </div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-foreground">
+            <h2 className="text-4xl lg:text-5xl font-['League_Spartan']d text-foreground">
               Latest Custom Installations
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-gray-600 font-['League_Spartan'] max-w-2xl mx-auto">
               Showcasing our latest custom installations and interior transformations across Harare
             </p>
           </div>
 
           {/* Portfolio Grid - Made bigger */}
-          <div className="h-[350px] w-full border border-white rounded-full">
+          <div className="h-[350px] w-full  rounded-full">
             <CircularGallery 
               items={portfolioItems} 
               bend={4} 

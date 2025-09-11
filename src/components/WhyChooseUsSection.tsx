@@ -25,16 +25,16 @@ const WhyChooseUsSection = () => {
   return (
     <section 
       ref={ref}
-      className={`w-full bg-gray-50 py-16 transition-all duration-1000 ease-out ${
+      className={`w-full  py-16 transition-all duration-1000 ease-out ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center space-y-4 mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground">
+          <h2 className="text-4xl lg:text-5xl font-['League_Spartan'] text-foreground">
             Why Choose Neocentric Interiors?
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl font-['League_Spartan'] text-gray-600">
             Quality craftsmanship and attention to detail
           </p>
         </div>
@@ -45,10 +45,10 @@ const WhyChooseUsSection = () => {
               <div className="w-16 h-16 bg-orange rounded-full flex items-center justify-center mx-auto">
                 <div className="w-8 h-8 bg-white rounded-full"></div>
               </div>
-              <h3 className="text-xl font-bold text-foreground">
+              <h3 className="text-xl font-['League_Spartan'] text-foreground">
                 {reason.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 font-['League_Spartan'] leading-relaxed">
                 {reason.description}
               </p>
             </div>

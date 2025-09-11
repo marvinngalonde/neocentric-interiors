@@ -34,16 +34,16 @@ const ServicesSection = () => {
     <section 
       ref={ref}
       id="services" 
-      className={`w-full bg-white py-16 transition-all duration-1000 ease-out ${
+      className={`w-full py-16 transition-all duration-1000 ease-out ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center space-y-4 mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground">
+          <h2 className="text-4xl lg:text-5xl font-['League_Spartan'] text-foreground">
             Our Specialized Services
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 font-['League_Spartan'] max-w-3xl mx-auto">
             Expert craftsmanship and custom solutions for every aspect of your home interior needs
           </p>
         </div>
@@ -51,10 +51,10 @@ const ServicesSection = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div key={index} className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300">
-              <h3 className="text-xl font-bold text-foreground mb-4">
+              <h3 className="text-xl font-['League_Spartan'] text-foreground mb-4">
                 {service.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 font-['League_Spartan'] leading-relaxed">
                 {service.description}
               </p>
             </div>

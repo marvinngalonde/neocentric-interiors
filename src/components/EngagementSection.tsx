@@ -8,7 +8,7 @@ const EngagementSection = () => {
     <section 
       ref={ref}
       id="contact" 
-      className={`w-full bg-gray-900 py-16 transition-all duration-1000 ease-out ${
+      className={`w-full centeredbg py-16 transition-all duration-1000 ease-out ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
       }`}
     >
@@ -16,13 +16,13 @@ const EngagementSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-6">
-            <h2 className="text-4xl lg:text-5xl font-bold text-white leading-tight">
+            <h2 className="text-4xl lg:text-5xl font-['League_Spartan'] text-white leading-tight">
               Ready to Transform Your Home?
             </h2>
-            <p className="text-gray-300 text-lg leading-relaxed">
+            <p className="text-gray-500 text-lg font-['League_Spartan'] leading-relaxed">
               Contact us today for a free consultation and quote for your custom interior project
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col font-['League_Spartan'] sm:flex-row gap-4">
               <Button variant="orange" size="xl">
                 Get Free Quote
               </Button>
@@ -30,14 +30,14 @@ const EngagementSection = () => {
                 Call +263 77 658 2131
               </Button>
             </div>
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-500  font-['League_Spartan'] text-sm">
               Serving Harare and surrounding areas • Licensed & Insured
             </p>
           </div>
 
           {/* Right Content - Contact Info or Image */}
-          <div className="bg-gray-800 rounded-2xl p-8 space-y-6">
-            <h3 className="text-2xl font-bold text-white">Get in Touch</h3>
+          <div className="topLeft rounded-2xl p-8 space-y-6">
+            <h3 className="text-2xl font-['League_Spartan'] text-white">Get in Touch</h3>
             <div className="space-y-4">
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-orange rounded-full flex items-center justify-center">
@@ -46,8 +46,8 @@ const EngagementSection = () => {
                   </svg>
                 </div>
                 <div>
-                  <div className="text-white font-semibold">Phone</div>
-                  <div className="text-gray-300">+263 77 658 2131</div>
+                  <div className="text-gray-600 font-['League_Spartan']">Phone</div>
+                  <div className="text-gray-500 font-['League_Spartan']">+263 77 658 2131</div>
                 </div>
               </div>
               
@@ -58,8 +58,8 @@ const EngagementSection = () => {
                   </svg>
                 </div>
                 <div>
-                  <div className="text-white font-semibold">Email</div>
-                  <div className="text-gray-300">neocentricinteriors@gmail.com</div>
+                  <div className="text-gray-600 font-['League_Spartan']">Email</div>
+                  <div className="text-gray-500 font-['League_Spartan']">neocentricinteriors@gmail.com</div>
                 </div>
               </div>
 
@@ -71,8 +71,8 @@ const EngagementSection = () => {
                   </svg>
                 </div>
                 <div>
-                  <div className="text-white font-semibold">Location</div>
-                  <div className="text-gray-300">1080 Tynwald South Industrial Area, Harare</div>
+                  <div className="text-gray-600 font-['League_Spartan']">Location</div>
+                  <div className="text-gray-500 font-['League_Spartan']">NRZ Complex, Seke Road, Harare, Zimbabwe</div>
                 </div>
               </div>
             </div>

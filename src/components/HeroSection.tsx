@@ -12,13 +12,13 @@ const HeroSection = () => {
     <section 
       ref={ref}
       id="home" 
-      className={`w-full bg-background relative transition-all duration-1000 ease-out ${
+      className={`w-full  relative transition-all duration-1000 ease-out ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
       }`}
     >
-      <div className="absolute inset-0 z-10">
+      {/* <div className="absolute inset-0 z-10">
         <SplashCursor />
-      </div>
+      </div> */}
       <div className="relative z-20 max-w-7xl mx-auto px-6 py-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
@@ -28,7 +28,7 @@ const HeroSection = () => {
                 <div className="relative">
                   <TextType
                     as="h1"
-                    className="text-5xl lg:text-6xl font-bold text-foreground leading-tight"
+                    className="text-5xl lg:text-6xl font-['League_Spartan'] text-foreground leading-tight"
                     text={[
                       "Elevate Your Home",
                       "Transform Your Space"
@@ -45,7 +45,7 @@ const HeroSection = () => {
                 </div>
                 <TextType
                   as="h2"
-                  className="text-5xl lg:text-6xl font-bold text-foreground leading-tight"
+                  className="text-5xl lg:text-6xl  font-['League_Spartan'] text-foreground leading-tight"
                   text="with Elegant, Personalized Interior Design"
                   showCursor={false}
                   typingSpeed={80}
@@ -53,12 +53,12 @@ const HeroSection = () => {
                 />
               </div>
               
-              <p className="text-lg text-gray-600 max-w-md leading-relaxed">
+              <p className="text-lg font-['League_Spartan'] text-gray-600 max-w-md leading-relaxed">
                 Transform your space with custom interiors that blend sophistication, comfort, and style. Designed for modern living, curated for timeless appeal.
               </p>
             </div>
 
-            <div className="flex items-center space-x-6">
+            <div className="flex font-['League_Spartan'] items-center space-x-6">
               <Button variant="orange" size="xl">
                 <a href="#contact"></a>
                 Get Started Today
@@ -74,8 +74,8 @@ const HeroSection = () => {
                   </div>
                 </div>
                 <div className="text-sm">
-                  <div className="font-semibold text-foreground">AWARD WINNING INTERIOR</div>
-                  <div className="text-gray-600">SINCE 2008</div>
+                  <div className="font-['League_Spartan'] text-foreground">AWARD WINNING INTERIOR</div>
+                  <div className="text-gray-600 font-['League_Spartan']">SINCE 2008</div>
                 </div>
               </div>
             </div>
@@ -96,7 +96,7 @@ const HeroSection = () => {
                   alt="Living Room" 
                   className="w-16 h-12 object-cover rounded-lg mb-2"
                 />
-                <div className="text-xs text-gray-600">Living Room</div>
+                <div className="text-xs font-['League_Spartan'] text-gray-600">Living Room</div>
               </div>
               <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-lg">
                 <img 
@@ -104,7 +104,7 @@ const HeroSection = () => {
                   alt="Modern Style" 
                   className="w-20 h-12 object-cover rounded-lg mb-2"
                 />
-                <div className="text-xs text-gray-600">Modern Style</div>
+                <div className="text-xs font-['League_Spartan'] text-gray-600">Modern Style</div>
               </div>
             </div>
             

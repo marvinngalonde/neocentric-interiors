@@ -86,24 +86,24 @@ const VirtualTourSection = () => {
     <>
       <section id="tour"
         ref={ref}
-        className={`w-full bg-white py-16 transition-all duration-1000 ease-out ${
+        className={`w-full  py-16 transition-all duration-1000 ease-out ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}
       >
         <div className="max-w-7xl mx-auto px-6">
-          <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-3xl p-12 text-center text-white">
+          <div className="topLeft rounded-3xl p-12 text-center  text-white">
             <div className="space-y-6 max-w-3xl mx-auto">
-              <h2 className="text-4xl lg:text-5xl font-bold">
+              <h2 className="text-4xl font-['League_Spartan'] lg:text-5xl text-black ">
                 Take a Virtual Tour
               </h2>
-              <p className="text-xl text-gray-300">
+              <p className="text-xl font-['League_Spartan'] text-gray-500">
                 Experience our latest projects from the comfort of your home. Explore our stunning interior transformations in immersive detail.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col font-['League_Spartan'] sm:flex-row gap-4 justify-center">
                 <Button
                   variant="default"
                   size="lg"
-                  className="bg-orange hover:bg-orange/90 text-white px-8 py-3"
+                  className="bg-orange font-['League_Spartan'] hover:bg-orange/90 text-white px-8 py-3"
                   onClick={() => setIsTourOpen(true)}
                 >
                   Start Virtual Tour
@@ -121,14 +121,14 @@ const VirtualTourSection = () => {
       <Dialog open={isTourOpen} onOpenChange={closeTour}>
         <DialogContent className="max-w-4xl max-h-[90vh] overflow-hidden">
           <DialogHeader>
-            <DialogTitle className="text-2xl font-bold text-center">
+            <DialogTitle className="text-2xl font-['League_Spartan'] font-bold text-center">
               {tourSteps[currentStep]?.title || "Virtual Tour"}
             </DialogTitle>
           </DialogHeader>
 
           <div className="relative">
             {/* Tour Image */}
-            <div className="relative w-full h-96 bg-gray-100 rounded-lg overflow-hidden">
+            <div className="relative w-full h-96 bg-gray-100 font-['League_Spartan'] rounded-lg overflow-hidden">
               {tourSteps[currentStep]?.image && (
                 <img
                   src={tourSteps[currentStep].image}

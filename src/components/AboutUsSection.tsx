@@ -31,7 +31,7 @@ const AboutUsSection = () => {
   return (
     <section  id="about"
       ref={ref}
-      className={`w-full bg-background py-16 transition-all duration-1000 ease-out ${
+      className={`w-full  py-16 transition-all duration-1000 ease-out ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
       }`}
     >
@@ -50,8 +50,8 @@ const AboutUsSection = () => {
             {/* Floating Stats Card */}
             <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl p-6 shadow-xl">
               <div className="text-center">
-                <div className="text-3xl font-bold text-orange">15+</div>
-                <div className="text-sm text-gray-600">Years Experience</div>
+                <div className="text-3xl font-['League_Spartan'] text-orange">15+</div>
+                <div className="text-sm font-['League_Spartan'] text-gray-600">Years Experience</div>
               </div>
             </div>
           </div>
@@ -60,21 +60,21 @@ const AboutUsSection = () => {
           <div className="space-y-8">
             <div className="space-y-6">
               <div className="inline-block bg-orange/10 rounded-full px-4 py-2">
-                <span className="text-sm font-medium text-orange">About Us</span>
+                <span className="text-sm font-['League_Spartan'] text-orange">About Us</span>
               </div>
               
-              <h2 className="text-4xl lg:text-5xl font-bold text-foreground leading-tight">
+              <h2 className="text-4xl lg:text-5xl font-['League_Spartan'] text-foreground leading-tight">
                 Crafting Spaces with
-                <span className="text-orange"> Precision</span>
+                <span className="text-orange font-['League_Spartan']"> Precision</span>
               </h2>
               
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-lg text-gray-600 font-['League_Spartan'] leading-relaxed">
                 At Neocentric Interiors, we believe every space tells a story. Our passion for design meets 
                 exceptional craftsmanship to create interiors that not only look stunning but also enhance your 
                 daily living experience.
               </p>
               
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 font-['League_Spartan'] leading-relaxed">
                 Based in Harare, we've been transforming homes across Zimbabwe for over 15 years, bringing 
                 international design standards to local homes while respecting the unique character of each space.
               </p>
@@ -87,17 +87,17 @@ const AboutUsSection = () => {
                   <div className="w-12 h-12 bg-orange/10 rounded-lg flex items-center justify-center">
                     <feature.icon className="w-6 h-6 text-orange" />
                   </div>
-                  <h3 className="font-semibold text-foreground">{feature.title}</h3>
-                  <p className="text-sm text-gray-600">{feature.description}</p>
+                  <h3 className="font-['League_Spartan'] text-foreground">{feature.title}</h3>
+                  <p className="text-sm font-['League_Spartan'] text-gray-600">{feature.description}</p>
                 </div>
               ))}
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col font-['League_Spartan'] sm:flex-row gap-4">
               <Button variant="orange" size="lg">
                 Learn More About Us
               </Button>
-              <Button variant="outline" size="lg" className="border-orange text-orange hover:bg-orange hover:text-white">
+              <Button variant="outline" size="lg" className="border-orange font-['League_Spartan'] text-orange hover:bg-orange hover:text-white">
                 View Our Process
               </Button>
             </div>
