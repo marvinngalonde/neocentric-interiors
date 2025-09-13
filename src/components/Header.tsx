@@ -69,13 +69,17 @@ const Header = () => {
                 </a>
               )
             )}
-            <Button
+           
+              <a className="w-full" href="https://wa.me/263776582131">
+               <Button
               variant="default"
               size="lg"
-              className="w-full text-gray-500 font-['League_Spartan'] border border-gray-300 hover:bg-orange/90 rounded-full"
+              className="w-full text-gray-200 font-['League_Spartan'] bg-orange/90 border border-gray-300 hover:bg-orange/90 rounded-full"
             >
-              <a href="https://wa.me/263776582131">WhatsApp Us</a>
-            </Button>
+              WhatsApp Us
+              </Button>
+              </a>
+            
           </nav>
         </div>
       )}

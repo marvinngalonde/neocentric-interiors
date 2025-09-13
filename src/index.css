@@ -36,6 +36,22 @@ body {
   );
 }
 
+/* Mobile styles */
+@media (max-width: 639px) {
+body{
+  background: linear-gradient(
+    to right,
+    #ffffffff 0%,
+    rgba(172, 170, 170, 0.99) 30%,
+rgba(124, 124, 124, 0.98) 45%,
+rgba(124, 124, 124, 0.97) 55%,
+rgba(172, 170, 170, 0.98) 70%,
+    #ffffffff 100%
+  );
+}
+}
+
+
 .topLeft{
   background: linear-gradient(
     to bottom right,

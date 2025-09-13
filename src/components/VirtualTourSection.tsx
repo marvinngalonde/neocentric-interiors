@@ -11,37 +11,36 @@ const VirtualTourSection = () => {
 
   // Available images from /images/ directory
   const availableImages = [
+   
     "WhatsApp Image 2025-08-04 at 18.47.05_f0d593e1.jpg",
+    "tv-cabinets.jpeg",
     "WhatsApp Image 2025-08-04 at 18.47.05_cf235b29.jpg",
     "WhatsApp Image 2025-08-04 at 18.47.03_fa8328f2.jpg",
     "WhatsApp Image 2025-08-04 at 18.47.02_4e8b27d6.jpg",
     "WhatsApp Image 2025-08-04 at 18.47.01_c6fa5305.jpg",
     "WhatsApp Image 2025-08-04 at 18.47.01_f576119e.jpg",
-    "WhatsApp Image 2025-08-04 at 18.47.00_1e8d68f7.jpg",
-    "WhatsApp Image 2025-08-04 at 18.47.01_f48ded62.jpg",
-    "WhatsApp Image 2025-08-04 at 18.47.00_bae7e5fd.jpg",
-    "WhatsApp Image 2025-08-04 at 18.46.59_19062089.jpg",
-    "WhatsApp Image 2025-08-04 at 18.46.59_9653b215.jpg",
-    "WhatsApp Image 2025-08-04 at 18.46.58_307d4642.jpg"
+    
+    "tv-cabinets2.jpeg"
+   
   ];
 
   // Tour step titles and descriptions
   const tourContent = [
     { title: "Welcome to Neocentric Interiors", description: "Experience our luxury interior design studio and workshop" },
+    { title: "TV Cabinets", description: "Where your vision meets our expertise" },
     { title: "Kitchen Design Studio", description: "Explore our premium kitchen design and installation process" },
     { title: "Living Room Transformations", description: "See how we create stunning living spaces" },
-    { title: "Master Bedroom Suite", description: "Discover our luxury bedroom design expertise" },
-    { title: "Custom Entertainment Centers", description: "Bespoke entertainment solutions for modern homes" },
+    { title: "Master Kitchen Suite", description: "Discover our luxury kitchen design expertise" },
+    { title: "Customized To Your Taste", description: "Bespoke  solutions for modern homes" },
     { title: "Premium Material Selection", description: "Explore our collection of premium materials and finishes" },
-    { title: "Design Consultation Area", description: "Where your vision meets our expertise" },
-    { title: "3D Visualization Station", description: "See your project come to life before construction" },
-    { title: "Custom Millwork Showcase", description: "Handcrafted cabinetry and built-in solutions" },
-    { title: "Luxury Finishes Gallery", description: "Premium finishes that elevate your space" }
+    
+    { title: "TV Cabinets", description: "See your project come to life before construction" }
+   
   ];
 
   // Generate tour steps using half of the available images
   useEffect(() => {
-    const halfCount = Math.floor(availableImages.length / 2);
+    const halfCount = Math.floor(availableImages.length );
     const selectedImages = availableImages.slice(0, halfCount);
 
     const generatedTourSteps = selectedImages.map((image, index) => ({
@@ -138,7 +137,7 @@ const VirtualTourSection = () => {
               )}
 
               {/* Hotspots */}
-              {tourSteps[currentStep]?.hotspots?.map((hotspot: any, index: number) => (
+              {/* {tourSteps[currentStep]?.hotspots?.map((hotspot: any, index: number) => (
                 <button
                   key={index}
                   className="absolute w-6 h-6 bg-orange rounded-full border-2 border-white shadow-lg hover:scale-110 transition-transform cursor-pointer"
@@ -148,7 +147,7 @@ const VirtualTourSection = () => {
                 >
                   <div className="w-full h-full bg-orange rounded-full animate-pulse"></div>
                 </button>
-              ))}
+              ))} */}
             </div>
 
             {/* Tour Navigation */}
@@ -185,9 +184,9 @@ const VirtualTourSection = () => {
             {/* Tour Description */}
             <div className="mt-4 text-center">
               <p className="text-gray-600">{tourSteps[currentStep]?.description}</p>
-              <p className="text-sm text-gray-500 mt-2">
+              {/* <p className="text-sm text-gray-500 mt-2">
                 Click on the orange dots to learn more about each feature
-              </p>
+              </p> */}
             </div>
           </div>
         </DialogContent>

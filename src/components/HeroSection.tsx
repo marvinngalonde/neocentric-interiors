@@ -75,7 +75,7 @@ const HeroSection = () => {
                 </div>
                 <div className="text-sm">
                   <div className="font-['League_Spartan'] text-foreground">AWARD WINNING INTERIOR</div>
-                  <div className="text-gray-600 font-['League_Spartan']">SINCE 2008</div>
+                  <div className="text-gray-600 font-['League_Spartan']">SINCE 2016</div>
                 </div>
               </div>
             </div>
@@ -96,11 +96,11 @@ const HeroSection = () => {
                   alt="Living Room" 
                   className="w-16 h-12 object-cover rounded-lg mb-2"
                 />
-                <div className="text-xs font-['League_Spartan'] text-gray-600">Living Room</div>
+                <div className="text-xs font-['League_Spartan'] text-gray-600">Kitchen</div>
               </div>
               <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-lg">
                 <img 
-                  src="/images/WhatsApp Image 2025-08-04 at 18.47.00_1e8d68f7.jpg" 
+                  src="/images/modernstyle.jpeg" 
                   alt="Modern Style" 
                   className="w-20 h-12 object-cover rounded-lg mb-2"
                 />

@@ -23,9 +23,9 @@ const EngagementSection = () => {
               Contact us today for a free consultation and quote for your custom interior project
             </p>
             <div className="flex flex-col font-['League_Spartan'] sm:flex-row gap-4">
-              <Button variant="orange" size="xl">
-                Get Free Quote
-              </Button>
+              
+              <a  href="https://wa.me/263776582131"><Button className="w-[21rem] md:w-[16rem] lg:w-[15rem]" variant="orange" size="xl">Get Free Quote </Button></a>
+             
               <Button variant="orange-outline" size="xl">
                 Call +263 77 658 2131
               </Button>

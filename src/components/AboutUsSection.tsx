@@ -41,7 +41,7 @@ const AboutUsSection = () => {
           <div className="relative">
             <div className="relative overflow-hidden rounded-3xl">
               <img 
-                src="/images/WhatsApp Image 2025-08-04 at 18.47.01_f48ded62.jpg" 
+                src="/images/forabout.jpeg" 
                 alt="Neocentric Interiors design philosophy - precision and elegance" 
                 className="rounded-lg shadow-2xl w-full h-auto"
               />
@@ -95,11 +95,13 @@ const AboutUsSection = () => {
 
             <div className="flex flex-col font-['League_Spartan'] sm:flex-row gap-4">
               <Button variant="orange" size="lg">
+                <a href="#contact">
                 Learn More About Us
+                </a>
               </Button>
-              <Button variant="outline" size="lg" className="border-orange font-['League_Spartan'] text-orange hover:bg-orange hover:text-white">
+              {/* <Button variant="outline" size="lg" className="border-orange font-['League_Spartan'] text-orange hover:bg-orange hover:text-white">
                 View Our Process
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>
